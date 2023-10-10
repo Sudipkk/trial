@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Open+Sans:wght@600&family=Poppins:ital,wght@0,200;0,300;0,400;1,500&family=Recursive:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(6, 6, 24);
+            color: white;
+            font-family: 'AR One Sans', sans-serif;
+        }
+
+        nav {
+            background-color: rgb(24, 24, 71);
+            height: 70px;
+        }
+
+        nav .logo {
+            line-height: 70px;
+            padding: 0 50px;
+            font-size: 1.3rem;
+        }
+
+        nav ul {
+            text-decoration: none;
+            float: right;
+        }
+
+        nav ul li {
+            padding: 0 20px;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 70px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: whitesmoke;
+            background-color: rgb(3, 58, 3);
+            font-size: 1.2rem;
+        }
+
+        #checkbtn {
+            float: right;
+            line-height: 70px;
+            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~ul {
+            left: 0px;
+        }
+
+        @media (max-width: 800px) {
+            nav ul {
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(24, 24, 71);
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                transition: 0.5s;
+            }
+
+            nav ul li {
+                display: block;
+                text-align: center;
+
+            }
+
+            #checkbtn {
+                display: block;
+            }
+        }
+
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        form {
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        form h3 {
+            color: black;
+            font-weight: 100px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        form input,
+        form textarea {
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background: #f5f5f5;
+            font-size: 16px;
+        }
+
+        form button {
+            padding: 15px;
+            background: rgb(99, 156, 13);
+            color: white;
+            font-size: 18px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+        }
+        footer p{
+            text-align: center;
+            background-color: rgb(24, 24, 71);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check" name="">
+        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+        <label class="logo">I Dont Know</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+            <!-- <form> -->
+                <h3>Contact Me</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="phone" placeholder="Your Phone No." required>
+                <textarea id="message" rows="4" placeholder="Enter Your Message"></textarea>
+                <button type="submit" id="btn">Send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; Reserved By I Dont Know</p>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function (e) {
+            e.preventDefault()
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var message = document.getElementById('message').value;
+            var body = 'name: ' +name + '<br/> email: ' +email + '<br/> phone: ' +phone + '<br/> message: ' +message
+
+            Email.send({
+                SecureToken: "916f58fe-08f2-4dfd-b737-22fb00927e8a",
+                To: 'sudipgamers839@gmail.com',
+                From: "sudipgamers2.0@gmail.com",
+                Subject: "contact message",
+                Body: body
+            }).then(
+                message => alert(message)
+            );
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Open+Sans:wght@600&family=Poppins:ital,wght@0,200;0,300;0,400;1,500&family=Recursive:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(6, 6, 24);
+            color: white;
+            font-family: 'AR One Sans', sans-serif;
+        }
+
+        nav {
+            background-color: rgb(24, 24, 71);
+            height: 70px;
+        }
+
+        nav .logo {
+            line-height: 70px;
+            padding: 0 50px;
+            font-size: 1.3rem;
+        }
+
+        nav ul {
+            text-decoration: none;
+            float: right;
+        }
+
+        nav ul li {
+            padding: 0 20px;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 70px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: whitesmoke;
+            background-color: rgb(3, 58, 3);
+            font-size: 1.2rem;
+        }
+
+        #checkbtn {
+            float: right;
+            line-height: 70px;
+            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~ul {
+            left: 0px;
+        }
+
+        @media (max-width: 800px) {
+            nav ul {
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(14, 14, 36);
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                transition: 0.5s;
+            }
+
+            nav ul li {
+                display: block;
+                text-align: center;
+
+            }
+
+            #checkbtn {
+                display: block;
+            }
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .container1 .left p {
+            padding: 0 30px;
+            font-size: 1.5rem;
+        }
+
+        .container1 .right img {
+            border-radius: 1000px;
+            width: 300px;
+            border: 2px solid white;
+            margin: 0 20px;
+        }
+
+        @media (max-width: 800px) {
+            .container1 {
+                display: block;
+                margin-top: 40px;
+            }
+
+            .container1 .left {
+                text-align: center;
+            }
+
+            .container1 .right {
+                margin-top: 40px;
+                padding: 0 auto;
+                text-align: center;
+            }
+        }
+
+        .name {
+            color: rgb(230, 122, 122);
+        }
+
+        .html {
+            color: orange;
+        }
+
+        .css {
+            color: rgb(66, 66, 192);
+        }
+
+        .javascript {
+            color: yellow;
+        }
+
+        .container1 #element {
+            text-align: center;
+            font-size: 1.3rem;
+            color: aquamarine;
+            margin-top: 10px;
+        }
+
+        hr {
+            margin: 50px;
+            padding: 0 15px;
+        }
+        .container2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .container2 .left {
+            background-color: wheat;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+        }
+        .container2 .middle {
+            background-color: wheat;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+        }
+        .container2 .right {
+            background-color: wheat;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+        }
+        .container2 .left img{
+           margin: 30px 75px;
+        }
+        .container2 .middle img{
+           margin: 45px 75px;
+        }
+        .container2 .right img{
+           margin: 30px 75px;
+        }
+        .container2 .left a:hover{
+            font-size: 1.3rem;
+            color: red;
+        }
+        .container2 .middle a:hover{
+            font-size: 1.3rem;
+            color: red;
+        }
+        .container2 .right a:hover{
+            font-size: 1.3rem;
+            color: red;
+        }
+        .container2 .left a{
+            text-decoration: none;
+            color: black;
+        }
+        .container2 .middle a{
+            text-decoration: none;
+            color: black;
+        }
+        .container2 .right a{
+            text-decoration: none;
+            color: black;
+        }
+        @media (max-width:800px){
+            .container2{
+                display: grid;
+                text-align: center;
+                margin: 25px 0;
+            }
+            .container2 .left{
+                margin: 25px 0;
+            }
+            .container2 .middle{
+                margin: 25px 0;
+            }
+            .container2 .right{
+                margin: 25px 0;
+            }
+        }
+        footer p{
+            text-align: center;
+            background-color: rgb(24, 24, 71);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check" name="">
+        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+        <label class="logo">I Dont Know</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container1">
+            <div class="left">
+                <p>Hi My Name Is <span class="name">Sudip</span> <br> And Im Good At <span class="html">Html</span>
+                    ,<span class="css">Css</span> And <span class="javascript">JavaScript</span> <br>
+                    <span id="element"></span>
+                </p>
+            </div>
+            <div class="right">
+                <img src="https://cdna.artstation.com/p/assets/images/images/033/255/826/large/pham-the-vinh-92f341190b289ca2605e3cd9be99df6e.jpg?1608941353"
+                    alt="logo">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container2">
+            <div class="left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/640px-Instagram_logo_2022.svg.png" alt="insta  logo" width="100px">
+                <a href="https://www.instagram.com/idk__9_/">InstaGram</a>
+            </div>
+            <div class="middle">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png?20220706172052" alt="youtube logo" width="100px">
+                <a href="https://www.youtube.com/@noobsudipp4549">YouTube</a>
+            </div>
+            <div class="right">
+                <img src="https://pbs.twimg.com/profile_images/1683899100922511378/5lY42eHs_400x400.jpg" alt="X logo" width="100px">
+                <a href="https://twitter.com/IDK_Sudip0_0">Twitter</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Reserved By I Dont Know</p>
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Video Editor', 'Web Designer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Open+Sans:wght@600&family=Poppins:ital,wght@0,200;0,300;0,400;1,500&family=Recursive:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(6, 6, 24);
+            color: white;
+            font-family: 'AR One Sans', sans-serif;
+        }
+
+        nav {
+            background-color: rgb(24, 24, 71);
+            height: 70px;
+        }
+
+        nav .logo {
+            line-height: 70px;
+            padding: 0 50px;
+            font-size: 1.3rem;
+        }
+
+        nav ul {
+            text-decoration: none;
+            float: right;
+        }
+
+        nav ul li {
+            padding: 0 20px;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 70px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: whitesmoke;
+            background-color: rgb(3, 58, 3);
+            font-size: 1.2rem;
+        }
+
+        #checkbtn {
+            float: right;
+            line-height: 70px;
+            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~ul {
+            left: 0px;
+        }
+
+        @media (max-width: 800px) {
+            nav ul {
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(24, 24, 71);
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                transition: 0.5s;
+            }
+
+            nav ul li {
+                display: block;
+                text-align: center;
+
+            }
+
+            #checkbtn {
+                display: block;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: whitesmoke;
+            margin: 30px 0;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 100px 40px;
+        }
+
+        .container1 .left img {
+            width: 250px;
+            padding: 0 15px;
+            border: 1px solid whitesmoke;
+        }
+
+        .container1 .right h4 {
+            text-align: center;
+            margin-top: 10px;
+            color: whitesmoke;
+        }
+
+        .container1 .right p {
+            text-align: center;
+            padding: 0 10px;
+            margin-top: 25px;
+        }
+
+        .container2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 100px 40px;
+        }
+
+        .container2 .right img {
+            width: 250px;
+            padding: 0 15px;
+            border: 1px solid whitesmoke;
+        }
+
+        .container2 .left h4 {
+            text-align: center;
+            margin-top: 10px;
+            color: whitesmoke;
+        }
+
+        .container2 .left p {
+            text-align: center;
+            padding: 0 10px;
+            margin-top: 25px;
+        }
+
+        hr {
+            margin: 50px;
+            padding: 0 15px;
+        }
+        .container3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 100px 40px;
+        }
+
+        .container3 .left img {
+            width: 250px;
+            padding: 0 15px;
+            border: 1px solid whitesmoke;
+        }
+
+        .container3 .right h4 {
+            text-align: center;
+            margin-top: 10px;
+            color: whitesmoke;
+        }
+
+        .container3 .right p {
+            text-align: center;
+            padding: 0 10px;
+            margin-top: 25px;
+        }
+
+        @media (max-width:800px){
+            .container1,.container2,.container3{
+                display: block;
+                align-items: center;
+                
+            }
+            .container1 .left {
+                text-align: center;
+            }
+            .container1 .right{
+                margin: 50px 0;
+            }
+            .container2 .right {
+                text-align: center;
+
+            }
+            .container2 .left{
+                margin: 50px 0;
+            }
+            .container3 .left {
+                text-align: center;
+            }
+            .container3 .right{
+                margin: 50px 0;
+            }
+        }
+        footer p{
+            text-align: center;
+            background-color: rgb(24, 24, 71);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check" name="">
+        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+        <label class="logo">I Dont Know</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>About Me</h1>
+        <div class="container1">
+            <div class="left">
+                <img src="https://images.unsplash.com/photo-1623230590824-f39e31a0a608?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwYm95fGVufDB8fDB8fHww&w=1000&q=80"
+                    alt="image">
+            </div>
+            <div class="right">
+                <h4>Web Developer</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi accusamus necessitatibus amet impedit,
+                    maiores magnam maxime, natus eius quis quas magni nihil eveniet saepe sequi ipsa nostrum
+                    reprehenderit adipisci a dolores illum inventore veritatis iusto ducimus perferendis. Fuga
+                    excepturi, architecto voluptatem delectus et nihil dolores asperiores exercitationem ducimus maxime
+                    aliquid!</p>
+            </div>
+        </div>
+        <hr>
+        <div class="container2">
+            <div class="left">
+                <h4>Web Designer</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero soluta tempora minima rerum
+                    asperiores impedit pariatur totam? Delectus iure dignissimos dolor mollitia maiores, quis quo autem
+                    omnis quisquam nisi saepe accusamus officia eligendi laudantium et quaerat laborum facilis ab
+                    quibusdam officiis corporis asperiores. Recusandae repudiandae hic, dignissimos ullam amet unde!</p>
+            </div>
+            <div class="right">
+                <img src="https://i.pinimg.com/736x/f3/31/3a/f3313a03e0c4c69fda4f5e01037e8966.jpg" alt="image">
+            </div>
+        </div>
+        <hr>
+        <div class="container3">
+            <div class="left">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpZK27ow23CqE-FJ687SHm3HQs0BXs6YMbew&usqp=CAU"
+                    alt="image">
+            </div>
+            <div class="right">
+                <h4>Video Editor</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe illum voluptatibus sapiente
+                    repellendus dicta debitis iure sint beatae sed repellat ex quibusdam, earum id ratione consectetur
+                    voluptas? Provident aliquam porro recusandae sed, tenetur temporibus et debitis dolores vel ab,
+                    veritatis facilis ullam ratione incidunt totam explicabo dolorum, animi nostrum delectus.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; Reserved By I Dont Know</p>
+    </footer>
+</body>
+
+</html>
